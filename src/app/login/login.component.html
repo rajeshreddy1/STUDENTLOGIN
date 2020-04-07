@@ -1,0 +1,23 @@
+<div class="container border border-primary">
+    <h1>Student Login Page</h1>
+    <div class="alert alert-warning" *ngIf="isValid">{{errorMessage}}</div>
+    <form (ngSubmit)="ValidateUser()">
+        <fieldset class="form-group">
+            <label>UserName</label>
+            <input type="text" name="username" 
+            [(ngModel)] = "username" 
+            class="form-control" 
+            required="required" 
+            placeholder="Enter username">
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" [(ngModel)] = "password" class="form-control" required="required" placeholder="Enter password">
+        </fieldset>
+
+        <button type="submit" class="btn btn-success">Login</button>
+        <div class="container row">
+            <a routerLink="">New User?</a>
+        </div>
+    </form>
+</div>

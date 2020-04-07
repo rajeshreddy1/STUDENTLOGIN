@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <h1>Welcome {{username}}</h1>
+    <h3>Your courses</h3>
+
+    <table class='table table-bordered'>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Course Code</th>
+                <th>Course Description</th>
+                <th>Professor</th>
+                <th>Enrolled Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses">
+                <td>{{course.id}}</td>
+                <td>{{course.courseCode}}</td>
+                <td>{{course.courseDescription}}</td>
+                <td>{{course.professor}}</td>
+                <td>{{course.enrolledDate | date}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

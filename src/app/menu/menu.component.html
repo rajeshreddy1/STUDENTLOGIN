@@ -1,0 +1,21 @@
+<header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+    <a class="navbar-brand" href="#">ProBPM Inc</a>
+
+    <ul class="navbar-nav">
+        <li *ngIf="loginService.isUserLoggedIn()" class="nav-item active"><a class="nav-link" routerLink="/welcome/{{username}}">MyCourses</a></li>
+        <li *ngIf="loginService.isUserLoggedIn()"><a class="nav-link" routerLink="">ListofCourses</a></li>
+    </ul> 
+    
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+        <li *ngIf="!loginService.isUserLoggedIn()"><a class="nav-link" routerLink="/login">Login</a></li>
+        <li *ngIf="loginService.isUserLoggedIn()"><a class="nav-link" routerLink="">Logout</a></li>
+    </ul>
+   
+</nav>
+
+
+
+</header>
