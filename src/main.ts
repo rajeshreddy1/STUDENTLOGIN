@@ -13,3 +13,4 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 //Rajesh Test
 //Dev commit
 //Git commit
+//Git conflict test
